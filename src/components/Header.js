@@ -8,13 +8,11 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
-  {
-    icon: faEnvelope,
-    url: "mailto: tyler.stambaugh@icloud.com",
-  },
   {
     icon: faGithub,
     url: "https://github.com/tylerstambaugh",
@@ -24,8 +22,12 @@ const socials = [
     url: "https://www.linkedin.com/in/tyler-stambaugh-b274a59/",
   },
   {
-    icon: faInstagram,
-    url: "https://www.instagram.com/tyler_stambaugh/",
+    icon: faPuzzlePiece,
+    url: "https://exercism.org/profiles/tylerstambaugh",
+  },
+  {
+    icon: faEnvelope,
+    url: "mailto: tyler.stambaugh@icloud.com",
   },
 ];
 
