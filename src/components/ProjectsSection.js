@@ -5,28 +5,34 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
-    description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+    title: "Segment Sniper",
+    shortDescription:
+      "A .Net Web API / React project that integrates with Strava to allow athletes to analyze workout data efficiently ",
     getImageSrc: () => require("../images/photo1.jpg"),
+    longDescription: "long description text goes here",
   },
   {
-    title: "React Infinite Scroll",
-    description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
+    title: "Eleven Fifty Academy",
+    shortDescription: `In May of 2022 I completed Eleven Fifty Academy's Software Development Course. This entailed over 600 hours of course 
+      instruction and lab time learning to build and maintain .Net applications. It was a fantastic experience that allowed 
+      me to rapidly build on the knowledge I'd gained over the years working with software engineers and transition to
+       software engineering.`,
     getImageSrc: () => require("../images/photo2.jpg"),
+    longDescription: "long description text goes here",
   },
   {
-    title: "Photo Gallery",
-    description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
+    title: "Mario Kart Kup Skorer",
+    shortDescription:
+      "A .Net Web API / MVC application used to solve the real world problems of tracking Mario Kart Kup scoring across game sessions.",
+    getImageSrc: () => require("../assets/images/"),
+    longDescription: "long description text goes here",
   },
   {
     title: "Event planner",
-    description:
+    shortDescription:
       "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
     getImageSrc: () => require("../images/photo4.jpg"),
+    longDescription: "long description text goes here",
   },
 ];
 
@@ -40,7 +46,7 @@ const ProjectsSection = () => {
       spacing={8}
     >
       <Heading as="h1" id="projects-section">
-        Featured Projects
+        Now Featuring
       </Heading>
       <Box
         display="grid"
@@ -51,8 +57,9 @@ const ProjectsSection = () => {
           <Card
             key={project.title}
             title={project.title}
-            description={project.description}
+            shortDescription={project.shortDescription}
             imageSrc={project.getImageSrc()}
+            longDescription={project.longDescription}
           />
         ))}
       </Box>

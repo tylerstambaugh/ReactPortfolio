@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useState, React } from "react";
 
-const Card = ({ title, description, imageSrc }) => {
+const Card = ({ title, description, imageSrc, longDescription }) => {
   const [showBack, setShowBack] = useState(false);
 
   const handleShowBack = () => {
