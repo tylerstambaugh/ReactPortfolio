@@ -8,7 +8,7 @@ const projects = [
     title: "Segment Sniper",
     shortDescription:
       "A .Net Web API / React project that integrates with Strava to allow athletes to analyze workout data efficiently ",
-    getImageSrc: () => require("../images/photo1.jpg"),
+    getImageSrc: () => require("../assets/images/segmentSniperScreenshot.png"),
     longDescription: "long description text goes here",
   },
   {
@@ -17,21 +17,26 @@ const projects = [
       instruction and lab time learning to build and maintain .Net applications. It was a fantastic experience that allowed 
       me to rapidly build on the knowledge I'd gained over the years working with software engineers and transition to
        software engineering.`,
-    getImageSrc: () => require("../images/photo2.jpg"),
+    getImageSrc: () => require("../assets/images/efa.png"),
     longDescription: "long description text goes here",
   },
   {
     title: "Mario Kart Kup Skorer",
     shortDescription:
       "A .Net Web API / MVC application used to solve the real world problems of tracking Mario Kart Kup scoring across game sessions.",
-    getImageSrc: () => require("../assets/images/"),
+    getImageSrc: () => require("../assets/images/mkKupSkorer.png"),
     longDescription: "long description text goes here",
   },
   {
-    title: "Event planner",
-    shortDescription:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
+    title: "Exercism-ing",
+    shortDescription: (
+      <span>
+        I continue to hone my skills and learn new ones by routinely completing
+        coding katas on Exercism.org. You can see my progress{" "}
+        <a href="https://exercism.org/profiles/tylerstambaugh">here</a>
+      </span>
+    ),
+    getImageSrc: () => require("../assets/images/exercismScreenshot.png"),
     longDescription: "long description text goes here",
   },
 ];
@@ -52,6 +57,7 @@ const ProjectsSection = () => {
         display="grid"
         gridTemplateColumns="repeat(2,minmax(0,1fr))"
         gridGap={8}
+        className={"box"}
       >
         {projects.map((project) => (
           <Card

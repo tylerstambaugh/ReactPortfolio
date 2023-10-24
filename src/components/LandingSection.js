@@ -13,6 +13,7 @@ const LandingSection = () => (
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
+    id="top"
   >
     <Avatar name="headshot" src={Headshot} size="x1" />
     <Heading>{greeting}</Heading>
