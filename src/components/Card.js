@@ -30,11 +30,11 @@ const Card = ({ title, shortDescription, imageSrc, longDescription }) => {
           <Box color="white" mt="4" rounded="md" shadow="md">
             <VStack borderRadius={"20px"} background={"whitesmoke"}>
               <Image src={imageSrc} className="card-image" />
-              <Heading>{title}</Heading>
+              <Heading className="card-heading">{title}</Heading>
               <Text className="card-text">{shortDescription}</Text>
               <Button onClick={handleShowBack} variant="outline">
                 <Text color={"black"} className="pb-4">
-                  See more
+                  See more{" "}
                 </Text>
                 <FontAwesomeIcon
                   icon={faArrowRight}
@@ -47,13 +47,13 @@ const Card = ({ title, shortDescription, imageSrc, longDescription }) => {
         </Fade>
       ) : (
         <Fade in={showBack}>
-          <Box p="40px" color="white" mt="4" rounded="md" shadow="md">
-            <VStack background={"whitesmoke"}>
+          <Box color="white" mt="4" rounded="md" shadow="md">
+            <VStack background={"whitesmoke"} borderRadius={"20px"}>
               <Heading className="card-heading">{title}</Heading>
-              <Text className="card-text">{longDescription}</Text>
+              <Text className="card-back">{longDescription}</Text>
               <Button onClick={handleShowBack}>
-                <Text color={"black"}>Back</Text>
                 <FontAwesomeIcon icon={faArrowLeft} size="1x" />
+                <Text color={"black"}>Back</Text>
               </Button>
             </VStack>
           </Box>

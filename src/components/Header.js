@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faInstagram,
@@ -64,6 +64,14 @@ const Header = () => {
         >
           <nav>
             <div style={{ display: "flex" }}>
+              {/* Add a link for downloading your resume */}
+              <a
+                href="./assets/documents/ResumeTylerJosephStambaugh.pdf"
+                download="ResumeTylerJosephStambaugh.pdf"
+                style={{ marginRight: "15px" }}
+              >
+                <FontAwesomeIcon icon={faFilePdf} size="2x" />
+              </a>
               {socials.map((item, index) => (
                 <a key={index} href={item.url} style={{ marginRight: "15px" }}>
                   {" "}
