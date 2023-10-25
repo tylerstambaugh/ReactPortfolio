@@ -7,9 +7,31 @@ const projects = [
   {
     title: "Segment Sniper",
     shortDescription:
-      "A .Net Web API / React project that integrates with Strava to allow athletes to analyze workout data efficiently ",
+      "A .Net Web API / React project that integrates with Strava to allow athletes to analyze workout data efficiently.",
     getImageSrc: () => require("../assets/images/segmentSniperScreenshot.png"),
-    longDescription: "long description text goes here",
+    longDescription: (
+      <>
+        <p>
+          I've been an bicycle racer for many years and have user Strava to
+          track my performance. When I got into writing software and found out
+          that they had an open API, I began writing a companion app to automate
+          a routine data analysis task.
+        </p>
+        <br />
+        <p>
+          This tool allows users to interrogate data from their activities and
+          find segments where they are close to the leader.
+        </p>
+        <br />
+        <p>It is built using:</p>
+        <ul>
+          <li>.Net 7 Web API backend on SQL Server via Entity Framework</li>
+          <li>Vite React frontend using Typescript</li>
+          <li>Custom JWT authentication and authorization</li>
+          <li>SOA adhering to SOLID principles</li>
+        </ul>
+      </>
+    ),
   },
   {
     title: "Eleven Fifty Academy",
